@@ -12,38 +12,37 @@ def is_enabled(value, default):
 
 # Bot information
 SESSION = environ.get('SESSION', 'Media_search')
-API_ID = int(environ['API_ID', '17050357'])
-API_HASH = environ['API_HASH', '29fd19124a1f32e9150625e2357a7a2f']
-BOT_TOKEN = environ['BOT_TOKEN', '5538832178:AAFE9RoS5zzWPNJAmAcC6uK-8aM9_I9LMCw']
+API_ID = int(environ['API_ID'])
+API_HASH = environ['API_HASH']
+BOT_TOKEN = environ['BOT_TOKEN']
 
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
 USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', True))
-PICS = (environ.get('PICS', 'https://telegra.ph/file/02be623532c0fbf2fd6ad.mp4')).split()
+PICS = (environ.get('PICS', 'https://telegra.ph/file/a2a1dac049b50dc7f8dfb.jpg https://telegra.ph/file/f0e8c7bcedc6e141674f1.jpg https://telegra.ph/file/24d6a1b2f30fb40685502.jpg https://telegra.ph/file/44db9096d48b3b0f452af.jpg https://telegra.ph/file/3fe9495c006ab895a473f.jpg')).split()
 
 # Admins, Channels & Users
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '1089622824').split()]
-CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1001650104536').split()]
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '').split()]
+CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '0').split()]
 auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '').split()]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
 auth_channel = environ.get('AUTH_CHANNEL')
 auth_grp = environ.get('AUTH_GROUP')
-AUTH_CHANNEL = -1001667110031
+AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
 AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
 
 # MongoDB information
-DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://elsaweds:ravi@cluster0.ta8eozk.mongodb.net/?retryWrites=true&w=majority")
-DATABASE_NAME = environ.get('DATABASE_NAME', "Cluster0")
-COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_Files')
+DATABASE_URI = environ.get('DATABASE_URI', "")
+DATABASE_NAME = environ.get('DATABASE_NAME', "Rajappan")
+COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
 # Others
-DELETE_TIME = int(environ.get('DELETE_TIME', 300))
-LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1001779986786'))
+LOG_CHANNEL = int(environ.get('LOG_CHANNEL', 0))
 SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'TechnoMindzChat')
-P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "True")), False)
+P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "False")), False)
 IMDB = is_enabled((environ.get('IMDB', "True")), True)
-SINGLE_BUTTON = is_enabled((environ.get('SINGLE_BUTTON', "True")), False)
-CUSTOM_FILE_CAPTION = environ.get("CUSTOM_FILE_CAPTION", '📁 ➜ [@TmMainChannel] <code>{file_name}</code>\n\n🗃️ <b>File Size : </b>{file_size}\n\n𝕊𝕌𝔹𝕊ℂℝ𝕀𝔹𝔼 𝕆𝕌ℝ 𝕐𝕆𝕌𝕋𝕌𝔹𝔼 ℂℍ𝔸ℕℕ𝔼𝕃 🥰 👇\nhttps://www.youtube.com/c/TechnoMindz\n\n✨Need To Chat Join @TechnoMindzChat\n\n⚠️This Message Will Be Deleted After  5 Hours Forward And Keep it to someone else Or Forward To your Saved Messages\n\n♥️ 𝗧𝗲𝗮𝗺 ➜ @TmMainChannel\n\n✯ ━━━━━━━ ✧ ━━━━━━━ ✯')
+SINGLE_BUTTON = is_enabled((environ.get('SINGLE_BUTTON', "False")), True)
+CUSTOM_FILE_CAPTION = environ.get("CUSTOM_FILE_CAPTION", None)
 BATCH_FILE_CAPTION = environ.get("BATCH_FILE_CAPTION", CUSTOM_FILE_CAPTION)
 IMDB_TEMPLATE = environ.get("IMDB_TEMPLATE", "<b>Query: {query}</b> \n‌‌‌‌IMDb Data:\n\n🏷 Title: <a href={url}>{title}</a>\n🎭 Genres: {genres}\n📆 Year: <a href={url}/releaseinfo>{year}</a>\n🌟 Rating: <a href={url}/ratings>{rating}</a> / 10")
 LONG_IMDB_DESCRIPTION = is_enabled(environ.get("LONG_IMDB_DESCRIPTION", "False"), False)
