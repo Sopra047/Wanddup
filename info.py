@@ -19,7 +19,7 @@ BOT_TOKEN = environ['BOT_TOKEN']
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
 USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', True))
-PICS = (environ.get('PICS', 'https://telegra.ph/file/35c3b65c6f9669f18134b.jpg https://telegra.ph/file/35c3b65c6f9669f18134b.jpg https://telegra.ph/file/35c3b65c6f9669f18134b.jpg https://telegra.ph/file/35c3b65c6f9669f18134b.jpg https://telegra.ph/file/35c3b65c6f9669f18134b.jpg')).split()
+PICS = (environ.get('PICS', 'https://telegra.ph/file/a2a1dac049b50dc7f8dfb.jpg https://telegra.ph/file/f0e8c7bcedc6e141674f1.jpg https://telegra.ph/file/24d6a1b2f30fb40685502.jpg https://telegra.ph/file/44db9096d48b3b0f452af.jpg https://telegra.ph/file/3fe9495c006ab895a473f.jpg')).split()
 
 # Admins, Channels & Users
 ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '').split()]
@@ -42,7 +42,7 @@ SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'TechnoMindzChat')
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "False")), False)
 IMDB = is_enabled((environ.get('IMDB', "True")), True)
 SINGLE_BUTTON = is_enabled((environ.get('SINGLE_BUTTON', "False")), True)
-CUSTOM_FILE_CAPTION = "📁 ➜ [@filmserieshoww] <code>{file_name}</code>\n\n🗃️ <b>File Size : </b>{file_size}\n\n𝕊𝕌𝔹𝕊ℂℝ𝕀𝔹𝔼 𝕆𝕌ℝ 𝕐𝕆𝕌𝕋𝕌𝔹𝔼 ℂℍ𝔸ℕℕ𝔼𝕃Clique sur le lien 1XBET 🤑inscrit toi 👆🏾 et fait aussi un maximum de bénéficie 200 %   Rembourser en cas de perte avec le code promo : " sopra1 " en minuscule 🥰 👇\nhttps://affpa.top/L?tag=d_1815769m_97c_&site=1815769&ad=97\n\n✨Need To Chat Join @showgroup3\n\n⚠️Ce message sera supprimé après 5 heures et transmis à quelqu'un d'autre ou transmis à vos messages enregistrés\n\n♥️ 𝗧𝗲𝗮𝗺 ➜ @netflixshoww\n\n✯ ━━━━━━━ ✧ ━━━━━━━ ✯"
+CUSTOM_FILE_CAPTION = "📁 ➜ [@Filmserieshoww] <code>{file_name}</code>\n\n🗃️ <b>File Size : </b>{file_size}\n\n𝕊𝕌𝔹𝕊ℂℝ𝕀𝔹𝔼 𝕆𝕌ℝ TIKTOK ℂℍ𝔸ℕℕ𝔼𝕃 🥰 👇\nhttps://www.tiktok.com/@filmserieshoww?_t=8jPl5kT1lQr&_r=1\n\n✨Need To Chat Join @showgroup3\n\n⚠️This Message Will Be Deleted After 5 Hours Forward And Keep it to someone else Or Forward To your Saved Messages\n\n♥️ 𝗧𝗲𝗮𝗺 ➜ @filmserieshoww\n\n✯ ━━━━━━━ ✧ ━━━━━━━ ✯"
 BATCH_FILE_CAPTION = environ.get("BATCH_FILE_CAPTION", CUSTOM_FILE_CAPTION)
 IMDB_TEMPLATE = environ.get("IMDB_TEMPLATE", "<b>Query: {query}</b> \n‌‌‌‌IMDb Data:\n\n🏷 Title: <a href={url}>{title}</a>\n🎭 Genres: {genres}\n📆 Year: <a href={url}/releaseinfo>{year}</a>\n🌟 Rating: <a href={url}/ratings>{rating}</a> / 10")
 LONG_IMDB_DESCRIPTION = is_enabled(environ.get("LONG_IMDB_DESCRIPTION", "False"), False)
