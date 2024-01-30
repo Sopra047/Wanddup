@@ -40,7 +40,7 @@ COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 LOG_CHANNEL = int(environ.get('LOG_CHANNEL', 0))
 SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'TechnoMindzChat')
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "False")), False)
-IMDB = is_enabled((environ.get('IMDB', "True")), True)
+IMDB = is_enabled((environ.get('IMDB', "False")), False)
 SINGLE_BUTTON = is_enabled((environ.get('SINGLE_BUTTON', "False")), True)
 CUSTOM_FILE_CAPTION = "📁 ➜ [@Filmserieshoww] <code>{file_name}</code>\n\n🗃️ <b>File Size : </b>{file_size}\n\n𝕊𝕌𝔹𝕊ℂℝ𝕀𝔹𝔼 𝕆𝕌ℝ TIKTOK ℂℍ𝔸ℕℕ𝔼𝕃 🥰 👇\nhttps://www.tiktok.com/@filmserieshoww?_t=8jPl5kT1lQr&_r=1\n\n✨Need To Chat Join @showgroup3\n\n⚠️This Message Will Be Deleted After 5 Hours Forward And Keep it to someone else Or Forward To your Saved Messages\n\n♥️ 𝗧𝗲𝗮𝗺 ➜ @filmserieshoww\n\n✯ ━━━━━━━ ✧ ━━━━━━━ ✯"
 BATCH_FILE_CAPTION = environ.get("BATCH_FILE_CAPTION", CUSTOM_FILE_CAPTION)
