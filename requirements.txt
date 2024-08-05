@@ -7,4 +7,3 @@ umongo==3.0.1
 requests
 bs4
 imdbpy==2022.7.9
-Flask==2.0.1
